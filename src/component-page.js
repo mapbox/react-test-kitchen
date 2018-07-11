@@ -18,8 +18,14 @@ class ComponentPage extends React.Component {
 
     return (
       <div>
-        <h1>{title}</h1>
-        <Link to="/">Back to component list</Link>
+        <div style={{ marginBottom: 12 }}>
+          <Link to="/" style={{ color: "#4264fb", textDecoration: "none" }}>
+            Back to component list
+          </Link>
+        </div>
+        <h1 style={{ margin: "0 0 24px 0", fontWeight: "bold", fontSize: 35 }}>
+          {title}
+        </h1>
         <div>{caseEls}</div>
       </div>
     );

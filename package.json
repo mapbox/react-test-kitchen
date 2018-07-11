@@ -17,7 +17,7 @@
     "budo": "budo test/app.js -l -d -P -- -t babelify",
     "prestart": "run-p test-cases-index bundle",
     "start": "run-p bundle-watch budo",
-    "test-cases-index": "bin/build-rtk-index.js ./test/components ./test/component-index.js",
+    "test-cases-index": "bin/rtk-index.js ./test/components ./test/component-index.js",
     "bundle": "rollup -c",
     "prepublishOnly": "npm run bundle",
     "lint": "eslint .",

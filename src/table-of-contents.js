@@ -8,15 +8,19 @@ class TableOfContents extends React.Component {
 
     const entryEls = entries.map(entry => {
       return (
-        <div key={entry}>
-          <Link to={entry}>{entry}</Link>
+        <div key={entry} style={{ marginBottom: 12 }}>
+          <Link to={entry} style={{ color: "#4264fb", textDecoration: "none" }}>
+            {entry}
+          </Link>
         </div>
       );
     });
 
     return (
       <div>
-        <h1 style={{ marginBottom: 24 }}>Components</h1>
+        <h1 style={{ margin: "0 0 24px 0", fontWeight: "bold", fontSize: 45 }}>
+          React Test Kitchen
+        </h1>
         <div>{entryEls}</div>
       </div>
     );

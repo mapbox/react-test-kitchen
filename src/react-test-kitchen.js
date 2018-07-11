@@ -14,10 +14,12 @@ class ReactTestKitchen extends React.Component {
 
     const tocEntries = componentIndex.map(item => item.title);
     return (
-      <Router>
-        <TableOfContents path="/" entries={tocEntries} />
-        {pages}
-      </Router>
+      <div style={{ padding: 12 }}>
+        <Router>
+          <TableOfContents path="/" entries={tocEntries} />
+          {pages}
+        </Router>
+      </div>
     );
   }
 }
