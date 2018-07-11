@@ -1,9 +1,12 @@
-#!/usr/bin/env node 
-const meow = require('meow');
-const buildIndex = require('../lib/build-index');
-const fs = require('fs');
+#!/usr/bin/env node
+"use strict";
 
-const description = 'CLI for building an index of components in a specified directory'; 
+const meow = require("meow");
+const buildIndex = require("../lib/build-index");
+const fs = require("fs");
+
+const description =
+  "CLI for building an index of components in a specified directory";
 
 const help = `
   Usage
@@ -27,9 +30,10 @@ if (cli.input.length !== 2) {
   cli.showHelp();
 }
 
-buildIndex(input, output).then(result => {
-  console.log(result);
-  fs.writeFileSync(output, result);
-}).catch(error => {
-  console.error(error);
-});
+buildIndex(input, output)
+  .then(result => {
+    fs.writeFileSync(output, result);
+  })
+  .catch(error => {
+    console.error(error);
+  });

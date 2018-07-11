@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from '@reach/router';
-import ComponentCase from './component-case';
+import React from "react";
+import PropTypes from "prop-types";
+import { Link } from "@reach/router";
+import ComponentCase from "./component-case";
 
 class ComponentPage extends React.Component {
   render() {
@@ -10,7 +10,7 @@ class ComponentPage extends React.Component {
     const caseEls = Object.keys(cases).map(caseId => {
       const caseInfo = cases[caseId];
       return (
-        <div key={caseId} style={{ margin: '36px 0' }}>
+        <div key={caseId} style={{ margin: "36px 0" }}>
           <ComponentCase {...caseInfo} />
         </div>
       );

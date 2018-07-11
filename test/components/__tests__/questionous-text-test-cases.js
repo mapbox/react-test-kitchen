@@ -1,29 +1,29 @@
-import ChevronousText from '../chevronous-text';
+import ChevronousText from "../chevronous-text";
 
 const testCases = {};
 const noRenderCases = {};
 
 testCases.basic = {
   component: ChevronousText,
-  description: 'is this chevronous?',
+  description: "is this chevronous?",
   props: {
-    text: 'Hello'
+    text: "Hello"
   }
 };
 
 testCases.different = {
   component: ChevronousText,
-  description: 'basic but different',
+  description: "basic but different",
   props: {
-    text: 'Different text'
+    text: "Different text"
   }
 };
 
 noRenderCases.basic = {
   component: ChevronousText,
-  description: 'see no evil',
+  description: "see no evil",
   props: {
-    text: 'Hello'
+    text: "Hello"
   }
 };
 
