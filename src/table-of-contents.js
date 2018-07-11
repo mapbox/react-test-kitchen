@@ -18,7 +18,14 @@ class TableOfContents extends React.Component {
 
     return (
       <div>
-        <h1 style={{ margin: "0 0 24px 0", fontWeight: "bold", fontSize: 45 }}>
+        <h1
+          style={{
+            margin: "0 0 24px 0",
+            fontWeight: "bold",
+            fontSize: 45,
+            lineHeight: 1
+          }}
+        >
           React Test Kitchen
         </h1>
         <div>{entryEls}</div>

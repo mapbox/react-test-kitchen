@@ -23,7 +23,14 @@ class ComponentPage extends React.Component {
             Back to component list
           </Link>
         </div>
-        <h1 style={{ margin: "0 0 24px 0", fontWeight: "bold", fontSize: 35 }}>
+        <h1
+          style={{
+            margin: "0 0 24px 0",
+            fontWeight: "bold",
+            fontSize: 35,
+            lineHeight: 1
+          }}
+        >
           {title}
         </h1>
         <div>{caseEls}</div>
