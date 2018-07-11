@@ -5,7 +5,7 @@ const noRenderCases = {};
 
 testCases.basic = {
   component: ChevronousText,
-  description: 'just basic',
+  description: 'is this chevronous?',
   props: {
     text: 'Hello'
   }

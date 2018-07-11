@@ -8,9 +8,11 @@ class TableOfContents extends React.Component {
 
     const entryEls = entries.map(entry => {
       return (
-        <Link to={entry} key={entry}>
-          {entry}
-        </Link>
+        <div key={entry}>  
+          <Link to={entry}>
+            {entry}
+          </Link>
+        </div>
       );
     });
 

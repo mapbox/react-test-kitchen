@@ -11,6 +11,9 @@ module.exports = {
     file: path.join(__dirname, 'index.js'),
     format: 'cjs'
   },
+  watch: {
+    clearScreen: false
+  },
   external: ['react', '@reach/router', 'prop-types'],
   plugins: [
     rollupBabel({

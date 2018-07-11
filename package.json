@@ -10,7 +10,7 @@
   "scripts": {
     "bundle-watch": "rollup -w -c",
     "budo": "budo test/app.js -l -d -P -- -t babelify",
-    "start": "run-p bundle-watch budo",
+    "start": "npm run bundle && run-p bundle-watch budo",
     "bundle": "rollup -c",
     "prepublishOnly": "npm run bundle",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -53,6 +53,10 @@
     "rollup-plugin-node-resolve": "^3.3.0"
   },
   "dependencies": {
-    "@reach/router": "^1.1.1"
+    "@reach/router": "^1.1.1",
+    "globby": "^8.0.1",
+    "meow": "^5.0.0",
+    "pascal-case": "^2.0.1",
+    "@mapbox/fusspot": "^0.2.1"
   }
 }
