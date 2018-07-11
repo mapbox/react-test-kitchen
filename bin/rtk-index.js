@@ -10,14 +10,14 @@ const description =
 
 const help = `
   Usage
-    $ build-react-lab-index <input> <output>
+    $ rtk-index <input> <output>
 
   Arguments
     input             directory containing source components
     output            output file
 
   Examples
-    $ build-react-lab-index ./src ./component-index.js
+    $ rtk-index ./src ./component-index.js
 `;
 
 const cli = meow({ description, help });

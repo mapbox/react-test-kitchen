@@ -4,15 +4,15 @@ import { Router } from "@reach/router";
 import TableOfContents from "./table-of-contents";
 import ComponentPage from "./component-page";
 
-class ReactLab extends React.Component {
+class ReactTestKitchen extends React.Component {
   render() {
-    const { componentCases } = this.props;
+    const { componentIndex } = this.props;
 
-    const pages = componentCases.map(item => {
+    const pages = componentIndex.map(item => {
       return <ComponentPage key={item.title} path={item.title} {...item} />;
     });
 
-    const tocEntries = componentCases.map(item => item.title);
+    const tocEntries = componentIndex.map(item => item.title);
     return (
       <Router>
         <TableOfContents path="/" entries={tocEntries} />
@@ -22,8 +22,8 @@ class ReactLab extends React.Component {
   }
 }
 
-ReactLab.propTypes = {
-  componentCases: PropTypes.arrayOf(
+ReactTestKitchen.propTypes = {
+  componentIndex: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
       cases: PropTypes.objectOf(PropTypes.object).isRequired
@@ -31,4 +31,4 @@ ReactLab.propTypes = {
   )
 };
 
-export default ReactLab;
+export default ReactTestKitchen;

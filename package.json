@@ -1,16 +1,23 @@
 {
-  "name": "@mapbox/react-lab",
+  "name": "@mapbox/react-test-kitchen",
   "version": "0.1.0",
   "description": "A simple little laboratory for React component development and testing",
   "main": "index.js",
+  "bin": {
+    "rtk-index": "bin/rtk-index.js"
+  },
   "files": [
     "index.js",
-    "src"
+    "src",
+    "bin",
+    "lib"
   ],
   "scripts": {
     "bundle-watch": "rollup -w -c",
     "budo": "budo test/app.js -l -d -P -- -t babelify",
-    "start": "npm run bundle && run-p bundle-watch budo",
+    "prestart": "run-p test-cases-index bundle",
+    "start": "run-p bundle-watch budo",
+    "test-cases-index": "bin/build-rtk-index.js ./test/components ./test/component-index.js",
     "bundle": "rollup -c",
     "prepublishOnly": "npm run bundle",
     "lint": "eslint .",
@@ -20,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mapbox/react-lab.git"
+    "url": "git+https://github.com/mapbox/react-test-kitchen.git"
   },
   "keywords": [
     "react",
@@ -31,9 +38,9 @@
   "author": "Mapbox",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/mapbox/react-lab/issues"
+    "url": "https://github.com/mapbox/react-test-kitchen/issues"
   },
-  "homepage": "https://github.com/mapbox/react-lab#readme",
+  "homepage": "https://github.com/mapbox/react-test-kitchen#readme",
   "engines": {
     "node": ">=6"
   },
