@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "@reach/router";
+import ScrollToTop from "./scroll-to-top";
 
 class TableOfContents extends React.Component {
   render() {
@@ -18,6 +19,7 @@ class TableOfContents extends React.Component {
 
     return (
       <div>
+        <ScrollToTop />
         <h1
           style={{
             margin: "0 0 24px 0",

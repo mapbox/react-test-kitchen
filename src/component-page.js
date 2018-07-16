@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "@reach/router";
 import ComponentCase from "./component-case";
+import ScrollToTop from "./scroll-to-top";
 
 class ComponentPage extends React.Component {
   render() {
@@ -18,6 +19,7 @@ class ComponentPage extends React.Component {
 
     return (
       <div>
+        <ScrollToTop />
         <div style={{ marginBottom: 12 }}>
           <Link to="/" style={{ color: "#4264fb", textDecoration: "none" }}>
             Back to component list
