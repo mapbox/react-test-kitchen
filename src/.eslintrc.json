@@ -4,5 +4,8 @@
     "@mapbox/eslint-config-mapbox/import",
     "@mapbox/eslint-config-mapbox/react",
     "prettier"
-  ]
+  ],
+  "env": {
+    "browser": true
+  }
 }
