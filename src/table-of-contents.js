@@ -26,7 +26,7 @@ class TableOfContents extends React.Component {
             lineHeight: 1
           }}
         >
-          React Test Kitchen
+          {this.props.title}
         </h1>
         <div>{entryEls}</div>
       </div>
@@ -35,7 +35,8 @@ class TableOfContents extends React.Component {
 }
 
 TableOfContents.propTypes = {
-  entries: PropTypes.arrayOf(PropTypes.string).isRequired
+  entries: PropTypes.arrayOf(PropTypes.string).isRequired,
+  title: PropTypes.string.isRequired
 };
 
 export default TableOfContents;

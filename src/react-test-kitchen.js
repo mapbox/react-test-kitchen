@@ -16,7 +16,11 @@ class ReactTestKitchen extends React.Component {
     return (
       <div style={{ padding: 24 }}>
         <Router>
-          <TableOfContents path="/" entries={tocEntries} />
+          <TableOfContents
+            path="/"
+            entries={tocEntries}
+            title={this.props.projectTitle}
+          />
           {pages}
         </Router>
       </div>
@@ -30,7 +34,8 @@ ReactTestKitchen.propTypes = {
       title: PropTypes.string.isRequired,
       cases: PropTypes.objectOf(PropTypes.object).isRequired
     })
-  )
+  ),
+  projectTitle: PropTypes.string.isRequired
 };
 
 export default ReactTestKitchen;
