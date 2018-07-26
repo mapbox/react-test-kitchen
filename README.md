@@ -18,7 +18,7 @@ npm install react react-dom prop-types
 
 ## About
 
-When developing React components outside of any particular context (e.g. for a cross-project component library), you need a system for rendering and manually testing those component.
+When developing React components outside of any particular context (e.g. for a cross-project component library), you need a system for rendering and manually testing those components.
 
 When writing automated tests for React components, you need a way to manually verify that the assertions you're making in your tests correspond to *actually* correct appearance and behavior. Whether you're testing render functions (often with snapshots) or interactions, you may end up making erroneous assertions if you haven't *first* performed the same test manually.
 
@@ -37,7 +37,7 @@ When using React Test Kitchen, **you'll create test cases for your components**.
 
 Define test cases in JS files with the `-test-cases` suffix. For example, `modal-test-cases.js`.
 
-A test case file should provide a named `testCases` export (either `export { testCases }` or `module.exports = { testCases }`). `testCases` must an object whose keys are test case IDs and values are [test case objects](#test-case-api).
+A test case file should provide a named `testCases` export (either `export { testCases }` or `module.exports = { testCases }`). `testCases` must be an object whose keys are test case IDs and values are [test case objects](#test-case-api).
 
 Example test case file:
 
@@ -66,7 +66,7 @@ export { testCases };
 
 #### Spying on callbacks
 
-Often you'll want to define a callback that runs in the browser but is a spy for automated tests. You can do this in various ways, often depending on your spying library of choice.
+Often you'll want to define a callback that runs in the browser but is a spy for automated tests. You can do this in various ways, depending on your spying library of choice.
 
 One way is to define a `safeSpy` function that uses a spy in the test environment. For example, if you're using Jest you could do something like this:
 
@@ -242,7 +242,7 @@ The props that should be passed to your [`component`] in the test case.
 
 ### testCase.element
 
-Type: React *element*. Mutually exclusive with [`component`] and [`props`]. Usually you *won't* provide this, but it some cases it's helpful.
+Type: React *element*. Mutually exclusive with [`component`] and [`props`]. Usually you *won't* provide this, but in some cases it's helpful.
 
 A rendered React element (rendered either with JSX or `React.createElement()`) to use for the test case.
 
