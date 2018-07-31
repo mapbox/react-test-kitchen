@@ -75,10 +75,10 @@
     "rollup-plugin-node-resolve": "^3.3.0"
   },
   "dependencies": {
+    "@mapbox/fusspot": "^0.2.1",
     "@reach/router": "^1.1.1",
     "globby": "^8.0.1",
     "meow": "^5.0.0",
-    "pascal-case": "^2.0.1",
-    "@mapbox/fusspot": "^0.2.1"
+    "pascal-case": "^2.0.1"
   }
 }

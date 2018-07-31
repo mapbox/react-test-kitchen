@@ -11,9 +11,8 @@ testCases.basic = {
   }
 };
 
-testCases.different = {
+testCases["Basic, but also different. Special and different"] = {
   component: ChevronousText,
-  description: "basic but different",
   props: {
     text: "Different text"
   }
