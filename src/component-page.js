@@ -10,9 +10,13 @@ class ComponentPage extends React.Component {
 
     const caseEls = Object.keys(cases).map(caseId => {
       const caseInfo = cases[caseId];
+      let description = caseInfo.description || caseId;
+      if (!/\.$/.test(description)) {
+        description += ".";
+      }
       return (
         <div key={caseId} style={{ margin: "36px 0" }}>
-          <ComponentCase {...caseInfo} />
+          <ComponentCase {...caseInfo} description={description} />
         </div>
       );
     });

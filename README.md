@@ -47,13 +47,11 @@ import FancyBox from './path/to/fancy-box';
 
 const testCases = {};
 
-testCases.defaults = {
-  description: 'Default props',
+testCases['Default props'] = {
   component: FancyBox
 };
 
-testCases.bgColor = {
-  description: 'Colored background',
+testCases['Colored background'] = {
   component: FancyBox,
   props: {
     bgColor: 'pink'
@@ -78,8 +76,7 @@ function safeSpy(browserImplementation) {
   return jest.spy();
 }
 
-testCases.clickHandler = {
-  description: 'With a click handler',
+testCases['With a click handler'] = {
   component: FancyBox,
   props: {
     onClick: safeSpy(() => { console.log('clicked'); })
@@ -224,9 +221,13 @@ Most of the time your test cases will include `component` and `props`. For certa
 
 ### testCase.description
 
-Type: `string`. **Required.**
+Type: `string`. Falls back to the case ID.
 
-A prose description of your test case. This will be rendered in the web app and can be used, if you'd like, to describe test blocks.
+A prose description of your test case. If a `description` property is not provided, the case ID will be used as a fallback. Typically, the most straightforward pattern is to write long-form descriptions as the test case ID, e.g. `testCases['Watching the moon, listening to frogs'] = {...}`. That way you don't have to repeat descriptions both in camelCase (as the ID) and in prose (as the `description`).
+
+A period will be automatically appended to the description if it doesn't already end in a period.
+
+The description will be rendered in the web app and can also be used, if you'd like, to describe your test blocks.
 
 ### testCase.component
 
