@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 0.3.0
 
 - If no `description` is provided for a test case, fall back to the case ID. And a period will automatically be added to the end.
 
