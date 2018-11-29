@@ -7,8 +7,10 @@ import ComponentPage from "./component-page";
 class ReactTestKitchen extends React.Component {
   render() {
     const { componentIndex } = this.props;
+    const { basePath } = this.props.basePath;
     const pages = componentIndex.map(item => {
-      return <ComponentPage key={item.title} path={item.title} {...item} />;
+      const itemPath = basePath ? `${basePath}/${item.title}` : item.title;
+      return <ComponentPage key={item.title} path={itemPath} {...item} />;
     });
 
     const tocEntries = componentIndex.map(item => item.title);
