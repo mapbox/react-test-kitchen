@@ -9,6 +9,7 @@ class App extends React.Component {
       <ReactTestKitchen
         componentIndex={componentIndex}
         projectTitle="This is the project title"
+        basePath="/"
       />
     );
   }

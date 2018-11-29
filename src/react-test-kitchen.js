@@ -7,7 +7,6 @@ import ComponentPage from "./component-page";
 class ReactTestKitchen extends React.Component {
   render() {
     const { componentIndex } = this.props;
-
     const pages = componentIndex.map(item => {
       return <ComponentPage key={item.title} path={item.title} {...item} />;
     });
@@ -17,7 +16,7 @@ class ReactTestKitchen extends React.Component {
       <div style={{ padding: 24 }}>
         <Router>
           <TableOfContents
-            path="/"
+            path={this.props.basePath || "/"}
             entries={tocEntries}
             title={this.props.projectTitle}
           />
@@ -35,7 +34,8 @@ ReactTestKitchen.propTypes = {
       cases: PropTypes.objectOf(PropTypes.object).isRequired
     })
   ),
-  projectTitle: PropTypes.string.isRequired
+  projectTitle: PropTypes.string.isRequired,
+  basePath: PropTypes.string
 };
 
 export default ReactTestKitchen;
