@@ -16,9 +16,9 @@ class ReactTestKitchen extends React.Component {
     const tocEntries = componentIndex.map(item => item.title);
     return (
       <div style={{ padding: 24 }}>
-        <Router>
+        <Router basepath={basePath || "/"}>
           <TableOfContents
-            path={this.props.basePath || "/"}
+            path={basePath || "/"}
             entries={tocEntries}
             title={this.props.projectTitle}
           />
