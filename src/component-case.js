@@ -42,7 +42,7 @@ ComponentCase.propTypes = {
   props: PropTypes.object,
   element: PropTypes.node,
   containerClasses: PropTypes.string,
-  containerStyle: PropTypes.object,
+  containerStyle: PropTypes.object
 };
 
 function getWrappedComponent(component) {
