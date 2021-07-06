@@ -12,5 +12,5 @@ export default class ChevronousText extends React.PureComponent {
 }
 
 ChevronousText.propTypes = {
-  text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
 };

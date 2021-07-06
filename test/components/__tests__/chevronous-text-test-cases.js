@@ -7,23 +7,23 @@ testCases.basic = {
   component: ChevronousText,
   description: "just basic",
   props: {
-    text: "Hello"
-  }
+    text: "Hello",
+  },
 };
 
 testCases["Basic, but also different. Special and different"] = {
   component: ChevronousText,
   props: {
-    text: "Different text"
-  }
+    text: "Different text",
+  },
 };
 
 noRenderCases.basic = {
   component: ChevronousText,
   description: "see no evil",
   props: {
-    text: "Hello"
-  }
+    text: "Hello",
+  },
 };
 
 export default { testCases, noRenderCases };

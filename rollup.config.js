@@ -9,19 +9,19 @@ module.exports = {
   input: path.join(__dirname, "src/react-test-kitchen.js"),
   output: {
     file: path.join(__dirname, "index.js"),
-    format: "cjs"
+    format: "cjs",
   },
   watch: {
-    clearScreen: false
+    clearScreen: false,
   },
   external: ["react", "@reach/router", "prop-types"],
   plugins: [
     rollupBabel({
       babelrc: false,
       presets: [["@babel/env", { modules: false }], "@babel/react"],
-      exclude: "node_modules/**"
+      exclude: "node_modules/**",
     }),
     nodeResolve(),
-    commonJs()
-  ]
+    commonJs(),
+  ],
 };

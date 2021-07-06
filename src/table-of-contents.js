@@ -7,7 +7,7 @@ class TableOfContents extends React.Component {
   render() {
     const { entries } = this.props;
 
-    const entryEls = entries.map(entry => {
+    const entryEls = entries.map((entry) => {
       return (
         <div key={entry} style={{ marginBottom: 12 }}>
           <Link to={entry} style={{ color: "#4264fb", textDecoration: "none" }}>
@@ -25,7 +25,7 @@ class TableOfContents extends React.Component {
             margin: "0 0 24px 0",
             fontWeight: "bold",
             fontSize: 45,
-            lineHeight: 1
+            lineHeight: 1,
           }}
         >
           {this.props.title}
@@ -38,7 +38,7 @@ class TableOfContents extends React.Component {
 
 TableOfContents.propTypes = {
   entries: PropTypes.arrayOf(PropTypes.string).isRequired,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 };
 
 export default TableOfContents;
