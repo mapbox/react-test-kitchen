@@ -7,7 +7,7 @@ class TableOfContents extends React.Component {
   render() {
     const { entries } = this.props;
 
-    const entryEls = entries.map(entry => {
+    const entryEls = entries.map((entry) => {
       return (
         <div key={entry} style={{ marginBottom: 12 }}>
           <Link to={entry} style={{ color: '#4264fb', textDecoration: 'none' }}>

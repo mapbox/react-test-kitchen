@@ -8,11 +8,11 @@ class ReactTestKitchen extends React.Component {
   render() {
     const { componentIndex } = this.props;
 
-    const pages = componentIndex.map(item => {
+    const pages = componentIndex.map((item) => {
       return <ComponentPage key={item.title} path={item.title} {...item} />;
     });
 
-    const tocEntries = componentIndex.map(item => item.title);
+    const tocEntries = componentIndex.map((item) => item.title);
     return (
       <div style={{ padding: 24 }}>
         <Router>

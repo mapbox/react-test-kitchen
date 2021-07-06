@@ -31,9 +31,9 @@ if (cli.input.length !== 2) {
 }
 
 buildIndex(input, output)
-  .then(result => {
+  .then((result) => {
     fs.writeFileSync(output, result);
   })
-  .catch(error => {
+  .catch((error) => {
     console.error(error);
   });
