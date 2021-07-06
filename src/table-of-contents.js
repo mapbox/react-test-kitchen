@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "@reach/router";
-import ScrollToTop from "./scroll-to-top";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from '@reach/router';
+import ScrollToTop from './scroll-to-top';
 
 class TableOfContents extends React.Component {
   render() {
@@ -10,7 +10,7 @@ class TableOfContents extends React.Component {
     const entryEls = entries.map(entry => {
       return (
         <div key={entry} style={{ marginBottom: 12 }}>
-          <Link to={entry} style={{ color: "#4264fb", textDecoration: "none" }}>
+          <Link to={entry} style={{ color: '#4264fb', textDecoration: 'none' }}>
             {entry}
           </Link>
         </div>
@@ -22,8 +22,8 @@ class TableOfContents extends React.Component {
         <ScrollToTop />
         <h1
           style={{
-            margin: "0 0 24px 0",
-            fontWeight: "bold",
+            margin: '0 0 24px 0',
+            fontWeight: 'bold',
             fontSize: 45,
             lineHeight: 1
           }}

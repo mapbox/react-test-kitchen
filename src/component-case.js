@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 class ComponentCase extends React.Component {
   renderElement() {
@@ -29,7 +29,7 @@ class ComponentCase extends React.Component {
       <div>
         <div style={{ marginBottom: 12 }}>{description}</div>
         <div className={containerClasses} style={containerStyle}>
-          <div style={{ border: "1px dashed lightgray" }}>{element}</div>
+          <div style={{ border: '1px dashed lightgray' }}>{element}</div>
         </div>
       </div>
     );

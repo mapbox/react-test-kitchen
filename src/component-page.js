@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "@reach/router";
-import ComponentCase from "./component-case";
-import ScrollToTop from "./scroll-to-top";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from '@reach/router';
+import ComponentCase from './component-case';
+import ScrollToTop from './scroll-to-top';
 
 class ComponentPage extends React.Component {
   render() {
@@ -12,10 +12,10 @@ class ComponentPage extends React.Component {
       const caseInfo = cases[caseId];
       let description = caseInfo.description || caseId;
       if (!/\.$/.test(description)) {
-        description += ".";
+        description += '.';
       }
       return (
-        <div key={caseId} style={{ margin: "36px 0" }}>
+        <div key={caseId} style={{ margin: '36px 0' }}>
           <ComponentCase {...caseInfo} description={description} />
         </div>
       );
@@ -25,14 +25,14 @@ class ComponentPage extends React.Component {
       <div>
         <ScrollToTop />
         <div style={{ marginBottom: 12 }}>
-          <Link to="/" style={{ color: "#4264fb", textDecoration: "none" }}>
+          <Link to="/" style={{ color: '#4264fb', textDecoration: 'none' }}>
             Back to component list
           </Link>
         </div>
         <h1
           style={{
-            margin: "0 0 24px 0",
-            fontWeight: "bold",
+            margin: '0 0 24px 0',
+            fontWeight: 'bold',
             fontSize: 35,
             lineHeight: 1
           }}
