@@ -79,5 +79,10 @@
     "globby": "^11.0.4",
     "meow": "^9.0.0",
     "pascal-case": "^2.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
