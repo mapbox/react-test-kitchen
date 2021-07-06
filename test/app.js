@@ -1,7 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import ReactTestKitchen from ".."; // eslint-disable-line
-import componentIndex from "./component-index"; // eslint-disable-line
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ReactTestKitchen from '..'; // eslint-disable-line
+import componentIndex from './component-index'; // eslint-disable-line
 
 class App extends React.Component {
   render() {
@@ -14,6 +14,6 @@ class App extends React.Component {
   }
 }
 
-const container = document.createElement("div");
+const container = document.createElement('div');
 document.body.appendChild(container);
 ReactDOM.render(<App />, container);
