@@ -1,12 +1,12 @@
 #!/usr/bin/env node
-"use strict";
+'use strict';
 
-const meow = require("meow");
-const buildIndex = require("../lib/build-index");
-const fs = require("fs");
+const meow = require('meow');
+const buildIndex = require('../lib/build-index');
+const fs = require('fs');
 
 const description =
-  "CLI for building an index of components in a specified directory";
+  'CLI for building an index of components in a specified directory';
 
 const help = `
   Usage

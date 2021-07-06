@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Router } from "@reach/router";
-import TableOfContents from "./table-of-contents";
-import ComponentPage from "./component-page";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Router } from '@reach/router';
+import TableOfContents from './table-of-contents';
+import ComponentPage from './component-page';
 
 class ReactTestKitchen extends React.Component {
   render() {
