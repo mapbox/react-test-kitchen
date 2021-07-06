@@ -18,8 +18,7 @@ module.exports = {
   plugins: [
     rollupBabel({
       babelrc: false,
-      presets: [["env", { modules: false }], "react"],
-      plugins: ["external-helpers"],
+      presets: [["@babel/env", { modules: false }], "@babel/react"],
       exclude: "node_modules/**"
     }),
     nodeResolve(),
