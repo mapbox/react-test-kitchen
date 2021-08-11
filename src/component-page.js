@@ -8,7 +8,7 @@ class ComponentPage extends React.Component {
   render() {
     const { title, cases } = this.props;
 
-    const caseEls = Object.keys(cases).map(caseId => {
+    const caseEls = Object.keys(cases).map((caseId) => {
       const caseInfo = cases[caseId];
       let description = caseInfo.description || caseId;
       if (!/\.$/.test(description)) {

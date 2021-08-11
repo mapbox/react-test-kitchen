@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.0
+
+- Update dependencies.
+
 ## 0.3.0
 
 - If no `description` is provided for a test case, fall back to the case ID. And a period will automatically be added to the end.
